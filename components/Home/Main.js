@@ -1,10 +1,14 @@
 import React from 'react';
+import { useRef } from 'react';
+import Cursor from '../Cursor';
 import Hero from './Hero';
 
 function Main() {
+  const headerRef = useRef(null);
   return (
     <>
-      <Hero></Hero>
+      <Cursor reference={headerRef}></Cursor>
+      <Hero ref={headerRef}></Hero>
     </>
   );
 }
