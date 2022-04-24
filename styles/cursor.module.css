@@ -1,0 +1,46 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2500;
+  contain: layout style size;
+  pointer-events: none;
+}
+.media-blend {
+  mix-blend-mode: exclusion;
+}
+/* .media-blend > .cursor-media {
+  filter: sepia(12);
+} */
+.cursor::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform: scale(0.3);
+  background: white;
+  border-radius: 50%;
+}
+.cursor-media {
+  display: block;
+  height: 350px;
+  width: 350px;
+  background-color: aquamarine;
+  overflow: hidden;
+  border-radius: 100%;
+  transform: scale(0);
+  position: relative;
+  margin: -175px 0 0 -175px;
+}
+.cursor-media > div {
+  height: 350px;
+  width: 350px;
+  opacity: 1;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  position: absolute;
+}
