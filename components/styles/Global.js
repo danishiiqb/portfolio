@@ -8,18 +8,20 @@ export const GlobalStyle = createGlobalStyle`
    }
   
    html{
-   
        box-sizing: border-box;
        font-size: 62.5%;
+       overflow-x: hidden;
+       scroll-behavior: smooth;
    }
 
    body{
-    
+    visibility: hidden;
+    opacity: 0;
+    overflow-x: hidden;
+    height: 0;
     font-family: "Migra", sans-serif;
-    /* line-height: 1.6; */
     font-size: 2rem;
     font-weight: 800;
-   
     color: white;
    }
    
