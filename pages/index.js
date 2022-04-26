@@ -1,8 +1,11 @@
+import { collection, getDocs } from 'firebase/firestore';
 import Head from 'next/head';
 import Main from '../components/Home/Main';
 import Layout from '../components/Layout';
+import { db } from '../services/firebase';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
     <>
       <Head>
@@ -41,8 +44,22 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
-        <Main></Main>
+        <Main projects={projects}></Main>
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const projects = await getDocs(collection(db, 'projects'));
+  const projectsArr = [];
+  projects.forEach((docs) => {
+    projectsArr.push({ ...docs.data(), index: docs.id });
+  });
+  let sortedProjects = projectsArr.sort((a, b) => a.filterId - b.filterId);
+  return {
+    props: {
+      projects: sortedProjects,
+    },
+  };
 }

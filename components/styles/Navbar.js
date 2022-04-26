@@ -5,25 +5,46 @@ export const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
 
-  padding-top: 1.2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
   height: max-content;
   position: relative;
   z-index: 67;
 
   align-items: center;
+  @media (max-width: 768px) {
+    padding-top: 1rem;
+  }
   .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     width: 14%;
-    height: 2%;
+    height: 1.3%;
     opacity: 0;
     background-color: white;
   }
-  .links > a:first-child {
-    position: relative;
-    top: 0.2rem;
+
+  .links {
+    img {
+      @media (max-width: 768px) {
+        width: 12px !important;
+        height: 12px !important;
+      }
+    }
+    svg {
+      @media (max-width: 768px) {
+        width: 12px !important;
+        height: 12px !important;
+      }
+    }
   }
+  .links a {
+    @media (max-width: 768px) {
+      margin-left: 2.9rem !important;
+    }
+  }
+
   .links,
   .logo {
     opacity: 0;
@@ -34,5 +55,8 @@ export const NavBar = styled.div`
     font-family: Tusker;
     font-weight: 500;
     font-size: 1.79rem;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
