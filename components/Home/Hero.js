@@ -65,13 +65,18 @@ function Hero(props, headerRef) {
           },
           '-=.5'
         )
-        .to('.img__container', {
-          repeat: -1,
-          duration: 8,
-          y: '2%',
-          ease: 'power4.out',
-          yoyo: true,
-        });
+        .to(
+          '.img__container',
+          window.innerWidth < 768
+            ? {}
+            : {
+                repeat: -1,
+                duration: 8,
+                y: '2%',
+                ease: 'power4.out',
+                yoyo: true,
+              }
+        );
   }, [timeline, load]);
 
   return (
