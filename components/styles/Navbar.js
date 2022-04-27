@@ -55,6 +55,7 @@ export const NavBar = styled.div`
     font-family: Tusker;
     font-weight: 500;
     font-size: 1.79rem;
+    user-select: none;
     @media (max-width: 768px) {
       font-size: 1rem;
     }

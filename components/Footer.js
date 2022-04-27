@@ -5,10 +5,13 @@ import { FooterElem } from './styles/Footer';
 function Footer() {
   const { current: links } = useRef([
     { name: 'Instagram', link: 'https://www.instagram.com/danishiqq/' },
-    { name: 'Github', link: 'https://www.instagram.com/danishiqq/' },
-    { name: 'Behance', link: 'https://www.instagram.com/danishiqq/' },
-    { name: 'Linkedin', link: 'https://www.instagram.com/danishiqq/' },
-    { name: 'Twitter', link: 'https://www.instagram.com/danishiqq/' },
+    { name: 'Github', link: 'https://github.com/danishiiqb/' },
+    { name: 'Behance', link: 'https://www.behance.net/danishiqbal10/' },
+    {
+      name: 'Linkedin',
+      link: 'https://www.linkedin.com/in/danish-iqbal-429259239/',
+    },
+    { name: 'Twitter', link: 'https://twitter.com/iq_danish' },
   ]);
   return (
     <FooterElem>

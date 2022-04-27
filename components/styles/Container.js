@@ -15,9 +15,13 @@ export const Container = styled.div`
     grid-template-columns:
       [full-start] 1rem [center-start] repeat(12, [col-start] 1fr [col-end])
       [center-end] 1rem [full-end];
-    grid-template-rows: max-content 34vh;
+    grid-template-rows: max-content 35vh;
   }
-
+  @media (min-width: 1770px) {
+    grid-template-columns:
+      [full-start] 12rem [center-start] repeat(12, [col-start] 1fr [col-end])
+      [center-end] 12rem [full-end];
+  }
   .root-container {
     position: relative;
     z-index: 788;

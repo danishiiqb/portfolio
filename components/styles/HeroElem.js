@@ -16,6 +16,9 @@ export const HeroElem = styled.div`
     @media (max-width: 768px) {
       left: 1rem;
     }
+    @media (min-width: 1770px) {
+      left: 12rem;
+    }
     div {
       overflow: hidden;
     }
@@ -27,9 +30,17 @@ export const HeroElem = styled.div`
       line-height: 1;
       opacity: 0;
       font-size: 10.4rem;
+      @media (max-width: 1280px) {
+        font-size: 8rem;
+        line-height: 1.1;
+      }
       @media (max-width: 768px) {
         font-size: 3rem;
         line-height: 1.1;
+      }
+
+      @media (min-width: 1770px) {
+        font-size: 13rem;
       }
     }
   }
@@ -50,7 +61,7 @@ export const HeroElem = styled.div`
       border-bottom-right-radius: 1rem;
       border-top-right-radius: 1rem;
       box-shadow: 0 0 1rem 1px #ff0000;
-      opacity: 0;
+      /* opacity: 0; */
     }
   }
   .back {
@@ -83,7 +94,15 @@ export const HeroElem = styled.div`
     top: 50%;
     left: 50%;
     @media (max-width: 768px) {
-      opacity: 0 !important;
+      opacity: 1 !important;
+    }
+    img {
+      @media (max-width: 768px) {
+        width: 220px !important;
+      }
+      @media (min-width: 1770px) {
+        width: 1030px !important;
+      }
     }
   }
 `;

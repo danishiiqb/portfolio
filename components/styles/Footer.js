@@ -10,10 +10,10 @@ export const FooterElem = styled.div`
 
   padding: 6rem 0;
   z-index: 566;
-  margin-top: 12rem;
+
   @media (max-width: 768px) {
     padding: 2rem 0;
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   .list {
     display: flex;

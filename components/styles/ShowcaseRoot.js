@@ -110,6 +110,10 @@ export const ShowcaseRoot = styled.div`
     &__elements {
       display: flex;
       flex-wrap: wrap;
+      &--dev {
+        text-transform: capitalize;
+      }
+
       &--1 {
         flex-direction: column;
       }

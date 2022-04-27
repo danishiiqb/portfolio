@@ -12,13 +12,14 @@ export const GlobalStyle = createGlobalStyle`
        font-size: 62.5%;
        overflow-x: hidden;
        scroll-behavior: smooth;
+      
    }
 
    body{
     visibility: hidden;
-    opacity: 0;
+    opacity: 0.7;
+    background-color: black;
     overflow-x: hidden;
-    height: 0;
     font-family: "Migra", sans-serif;
     font-size: 2rem;
     font-weight: 800;
