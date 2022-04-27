@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Main from '../components/Home/Main';
 import Layout from '../components/Layout';
 import { db } from '../services/firebase';
-import { v4 as uuidv4 } from 'uuid';
 
 export default function Home({ projects }) {
   return (
     <>
       <Head>
-        <title>hggh</title>
+        <title>Danish Iqbal &nbsp;🤙 Portfolio</title>
+        <link rel='icon' href='/favicon.ico' />
         <link
           rel='preload'
           href='/fonts/migraFont/Migra-Extrabold.woff'
@@ -41,7 +41,6 @@ export default function Home({ projects }) {
           crossOrigin='anonymous'
         />
         <meta name='description' content='FrontEnd Developer' />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
         <Main projects={projects}></Main>
