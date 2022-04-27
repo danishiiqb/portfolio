@@ -3,56 +3,36 @@ import React from 'react';
 import { useRef } from 'react';
 import Links from './Links';
 import { NavBar } from './styles/Navbar';
+import { FaGithub, FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { GrMail } from 'react-icons/gr';
 
 function Nav() {
   const links = useRef([
     {
       imageLink: '/images/githublg.png',
       link: 'https://github.com/danishiiqb/',
-      dimensions: {
-        width: 25,
-        height: 25,
-      },
     },
     {
-      imageLink: '/images/linkedin.png',
-      link: '/',
-      dimensions: {
-        width: 24,
-        height: 24,
-      },
+      imageLink: FaLinkedinIn,
+      link: 'https://www.linkedin.com/in/danish-iqbal-429259239/',
     },
     {
-      imageLink: '/images/behance.png',
+      imageLink: FaBehance,
       link: 'https://www.behance.net/danishiqbal10/',
-      dimensions: {
-        width: 30,
-        height: 30,
-      },
     },
     {
-      imageLink: '/images/email.png',
+      imageLink: GrMail,
       link: 'https://mail.google.com/mail/?view=cm&fs=1&to=danishiq933@gmail.com',
-      dimensions: {
-        width: 30,
-        height: 30,
-      },
     },
   ]).current;
 
   return (
     <NavBar>
-      <h3>Danish Iqbal.</h3>
-      <div>
-        {links.map(({ link, imageLink, dimensions }, idx) => {
-          return (
-            <Links
-              key={idx}
-              dimensions={dimensions}
-              href={link}
-              src={imageLink}
-            ></Links>
-          );
+      <div className='navbar'> </div>
+      <h3 className='logo'>Danish Iqbal.</h3>
+      <div className='links'>
+        {links.map(({ link, imageLink }, idx) => {
+          return <Links key={idx} href={link} src={imageLink}></Links>;
         })}
       </div>
     </NavBar>

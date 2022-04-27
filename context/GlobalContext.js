@@ -17,8 +17,7 @@ function GlobalContextProvider({ children }) {
       gsap.to('body', {
         visibility: 'visible',
         opacity: 1,
-        height: 'auto',
-        duration: 0.04,
+        duration: 0.01,
         ease: 'back.out(1.7)',
       });
       setLoad(true);
