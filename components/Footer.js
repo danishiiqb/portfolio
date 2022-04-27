@@ -20,7 +20,7 @@ function Footer() {
         {links.map((item, idx) => {
           return (
             <div key={idx}>
-              <a href={item.link} rel='noopener' target='_blank'>
+              <a href={item.link} rel='noreferrer' target='_blank'>
                 {item.name}
               </a>
             </div>

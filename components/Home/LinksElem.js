@@ -10,7 +10,7 @@ function LinksElem({ links, title }) {
             <div key={idx} className='root__heading root__heading--2'>
               <img alt='' src={elem.icons} />
               <Link passHref href={`${elem.link}`}>
-                <a target='_blank'>
+                <a target='_blank' rel='noreferrer'>
                   <div>{elem.link}</div>
                 </a>
               </Link>

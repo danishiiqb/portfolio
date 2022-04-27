@@ -9,6 +9,7 @@ function Links({ href, src: Component }) {
         style={{
           marginLeft: '6rem',
         }}
+        rel='noreferrer'
         target='_blank'
       >
         {typeof Component !== 'string' ? (
